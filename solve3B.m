@@ -1,13 +1,11 @@
 function S = solve3B(I,m1,m2,m3,G)
-    % Author: Gerard Leyva
+    % Authors: Gerard Leyva
     % To run this, put in the command window >>
-    % I = [-0.5 0.5 0.5 0 -0.1 0.75 0 -0.3 0 0.3 0 -0.3]
-    % solve3B(I,0.5,0.5,0.5,0.0075)
-    f = 'threeBf';
+    % I = [-0.5 0.5 0.5 0 -0.1 0.75 0 -0.3 0 0.3 0 -0.3];
+    % solve3B(I,0.5,0.5,0.5,0.0075);
     t0 = 0;
-    n = 9500000;
-    %n = 100000;
-    hscale = 0.000015;
+    n = 1000000;
+    hscale = 0.00015;
 
     % Solar system simulation. These scales measures time in days. The
     % other units are in usual SI.
@@ -18,8 +16,8 @@ function S = solve3B(I,m1,m2,m3,G)
     %m2 = 5.97219e24;    % Mass of the Earth (in kg)
     %m3 = 7.34767309e22; % Mass of the Moon (in kg)
     %m1 = 1.9891e30;     % Mass of the Sun (in kg)
-    %n = 5000000;
-    %hscale = 10^18;
+    %n = 15000000;       % Uncomment this
+    %hscale = 9^18;      % Uncomment this
 
 
     % Runge-Kutta function to solve the ODE

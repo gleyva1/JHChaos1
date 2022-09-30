@@ -1,5 +1,5 @@
 function dot = threeBf(I,m1,m2,m3,G)
-    % Author: Gerard Leyva
+    % Authors: Gerard Leyva
 
     % Input and output.
     % Mass is entered through arguments m1,m2,m3. The G constant can be
@@ -32,14 +32,24 @@ function dot = threeBf(I,m1,m2,m3,G)
     r23 = sqrt((x3-x2)^2 + (y3-y2)^2);
     r13 = sqrt((x1-x3)^2 + (y1-y3)^2);
     
+    %{
     function Fij = gravF(mj,xi,xj,r)
         Fij = -G*mj*(xi-xj)/r^3;
     end
+    %}
 
+    %{
+    % Dimensionalized form.
     function Fijk = grav(mj,mk,xi,xj,xk,rij,rik)
         Fijk = -G*mj*(xi-xj)/rij^3 - G*mk*(xi-xk)/rik^3;
     end
+    %}
 
+    % Once the dimensionless form is found, edit this part of the code.
+    % The dimensionalized form is saved above.
+    function Fijk = grav(mj,mk,xi,xj,xk,rij,rik)
+        Fijk = -G*mj*(xi-xj)/rij^3 - G*mk*(xi-xk)/rik^3;
+    end
 
     % ODEs. First positions, then velocities
     %{
