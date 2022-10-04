@@ -4,8 +4,8 @@ function S = solve3B(I,m1,m2,m3,G)
     % I = [-0.5 0 0.5 0 -0.1 0.75 0 -0.3 0 0.3 0 -0.3];
     % solve3B(I,0.5,0.5,0.5,0.0075);
     t0 = 0;
-    n = 500000;          % Report uses n = 50000000;
-    hscale = 0.00015;    % Report uses hscale = 0.000015;
+    n = 2750000;
+    hscale = 0.000002;
 
     % Solar system simulation. These scales measures time in days. The
     % other units are in usual SI. In threeBf.m, use lines 43-45 and
