@@ -48,7 +48,12 @@ function dot = threeBf(I,m1,m2,m3,G)
     % Once the dimensionless form is found, edit this part of the code.
     % The dimensionalized form is saved above.
     function Fijk = grav(mj,mk,xi,xj,xk,rij,rik)
-        Fijk = -G*mj*(xi-xj)/rij^3 - G*mk*(xi-xk)/rik^3;
+        % Note that in the discussion document that x -> Greek xi and
+        % y -> Greek upsilon. Since the dimenions are the arbitrary length
+        % d, then the forms of xi, xj, ..., rij, ... remain virtually
+        % unchanged.
+        M = mk/mj;
+        Fijk = -(xi-xj)/rij^3 - M*(xi-xk)/rik^3;
     end
 
     % ODEs. First positions, then velocities
