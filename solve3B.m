@@ -4,11 +4,12 @@ function S = solve3B(I,m1,m2,m3,G)
     % I = [-0.5 0 0.5 0 -0.1 0.75 0 -0.3 0 0.3 0 -0.3];
     % solve3B(I,0.5,0.5,0.5,0.0075);
     t0 = 0;
-    n = 150000000;
-    hscale = 0.00000015;
+    n = 500000;          % Report uses n = 50000000;
+    hscale = 0.00015;    % Report uses hscale = 0.000015;
 
     % Solar system simulation. These scales measures time in days. The
-    % other units are in usual SI.
+    % other units are in usual SI. In threeBf.m, use lines 43-45 and
+    % comment-out 50-56.
     % Type in console >>
     % SSday = [0 0 1.495979e11 0 1.495979e11 -3.84472e8 0 0 0 2.592e9 8.83008e7 2.592e9]
     % SEM = solve3B(SSday,1.9891e30,5.97219e24,7.34767309e22,0.498199);
