@@ -75,13 +75,13 @@ function dot = threeBf(I,m1,m2,m3,G)
     dot(1) = I(7);  % xdot1 = vx1
     dot(2) = I(8);  % ydot1 = vy1
     dot(3) = I(9);  % xdot2 = vx2
-    dot(4) = I(10); % Ydot2 = vy2
+    dot(4) = I(10); % ydot2 = vy2
     dot(5) = I(11); % xdot3 = vx3
     dot(6) = I(12); % ydot3 = vy3
     dot(7) = grav(m2,m3,x1,x2,x3,r12,r13);   % vxdot1
     dot(8) = grav(m2,m3,y1,y2,y3,r12,r13);   % vydot1
-    dot(9) = grav(m1,m3,x2,x1,x3,r12,r23);   % vxdot2
-    dot(10) = grav(m1,m3,y2,y1,y3,r12,r23);  % vydot2
+    dot(9) = grav(m3,m1,x2,x3,x1,r23,r12);   % vxdot2
+    dot(10) = grav(m3,m1,y2,y3,y1,r23,r12);  % vydot2
     dot(11) = grav(m1,m2,x3,x1,x2,r13,r23);  % vxdot3
     dot(12) = grav(m1,m2,y3,y1,y2,r13,r23);  % vydot3
 

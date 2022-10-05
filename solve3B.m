@@ -2,10 +2,13 @@ function S = solve3B(I,m1,m2,m3,G)
     % Authors: Gerard Leyva
     % To run this, put in the command window >>
     % I = [-0.5 0 0.5 0 -0.1 0.75 0 -0.3 0 0.3 0 -0.3];
-    % solve3B(I,0.5,0.5,0.5,0.0075);
+    % solve3B(I,0.5,0.5,0.5,1);
     t0 = 0;
-    n = 2750000;
-    hscale = 0.000002;
+    n = 275000;
+    hscale = 0.0001;
+
+    %n = 1000000;
+    %hscale = 0.000025;
 
     % Solar system simulation. These scales measures time in days. The
     % other units are in usual SI. In threeBf.m, use lines 43-45 and
